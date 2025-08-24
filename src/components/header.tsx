@@ -2,7 +2,7 @@
 
 import { signOut, useSession } from "next-auth/react"
 import { FaSpotify } from "react-icons/fa";
-import { LuLoader2 } from "react-icons/lu";
+import { LuLoader } from "react-icons/lu";
 
 export function Header() {
     const { status } = useSession()
@@ -16,7 +16,7 @@ export function Header() {
     return (
         <header className="w-full flex justify-end items-center p-6">
             {status === 'loading' && (
-                <LuLoader2 className="animate-spin text-zinc-100" size={20}/>
+                <LuLoader className="animate-spin text-zinc-100" size={20}/>
             )}
 
             {status !== 'loading' && (

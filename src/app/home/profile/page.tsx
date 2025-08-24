@@ -18,8 +18,7 @@ export default async function ProfilePage(){
     
     const getUser = async (session: any ) => {
         try {
-            const response = await axios.get('https://api.spotify.com/v1/me', {
-                
+            const response = await axios.get('https://api.spotify.com/v1/me', {        
                 headers: {
                     Authorization: `Bearer ${session.accessToken}`,
                     'Cache-Control' : 'no-store'

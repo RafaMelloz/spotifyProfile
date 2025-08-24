@@ -7,7 +7,15 @@ export const authOptions: AuthOptions = {
             clientId: process.env.SPOTIFY_CLIENT_ID as string,
             clientSecret: process.env.SPOTIFY_CLIENT_SECRET as string,
             authorization:
-                "https://accounts.spotify.com/authorize?scope=user-read-email,user-read-private,playlist-read-private,playlist-read-collaborative,user-library-read,user-follow-read,user-read-currently-playing,user-read-recently-played,user-top-read",
+                `https://accounts.spotify.com/authorize?scope=
+                user-read-email,
+                user-read-private,
+                playlist-read-private,
+                playlist-read-collaborative,
+                user-library-read,user-follow-read,
+                user-read-currently-playing,
+                user-read-recently-played,
+                user-top-read`
         })
     ],
     callbacks: {

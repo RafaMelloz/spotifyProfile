@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LuGithub, LuHistory, LuMic2, LuMusic, LuUser2 } from "react-icons/lu";
+import { LuGithub, LuHistory, LuMic, LuMusic, LuUser } from "react-icons/lu";
 
 export function Sidebar(){
     const pathname = usePathname()
@@ -24,7 +24,7 @@ export function Sidebar(){
                 <ul className="text-zinc-400/70 flex justify-center sm:block">
                     <li className={`hover:text-zinc-300 duration-200 py-4 w-1/4 sm:w-auto hover:bg-spotifyGray hoverBorderGreen ${pathname === '/home/profile' && 'borderGreen text-zinc-300 bg-spotifyGray'}`}>
                         <Link href="/home/profile" className="flex flex-col justify-center items-center">
-                            <LuUser2 size={20}/>
+                            <LuUser size={20}/>
                             <span className="text-sm">Perfil</span>
                         </Link>
                     </li>
@@ -32,7 +32,7 @@ export function Sidebar(){
 
                     <li className={`hover:text-zinc-300 duration-200 py-4 w-1/4 sm:w-auto hover:bg-spotifyGray hoverBorderGreen ${pathname === '/home/artist' && 'borderGreen text-zinc-300 bg-spotifyGray'}`}>
                         <Link href="/home/artist" className="flex flex-col justify-center items-center">
-                            <LuMic2 size={20} />
+                            <LuMic size={20} />
                             <span className="text-sm">Artistas</span>
                         </Link>
                     </li>
